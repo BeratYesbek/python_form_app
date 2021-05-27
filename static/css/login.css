@@ -1,0 +1,604 @@
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 38, ../sass/stylesheet.scss */
+.container .login_section form h1, .container .signup_section form h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+.container-fluid{
+  margin-top: 8%;
+}
+/* line 42, ../sass/stylesheet.scss */
+.was-validated-user #user-error, .was-validated-password #pass-error {
+  display: block !important;
+  color: #da4644;
+  font-size: 11px;
+}
+
+/* line 47, ../sass/stylesheet.scss */
+.container .login_section form h1, .container .signup_section form h1 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 575px) {
+  /* line 47, ../sass/stylesheet.scss */
+  .container .login_section form h1, .container .signup_section form h1 {
+    font-size: 28px;
+    margin-top: 0;
+  }
+}
+
+/* line 56, ../sass/stylesheet.scss */
+.container .login_section form .btn-primary,
+.container .login_section form .btn-outline-primary, .container .signup_section form .btn-primary,
+.container .signup_section form .btn-outline-primary {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 56, ../sass/stylesheet.scss */
+  .container .login_section form .btn-primary,
+  .container .login_section form .btn-outline-primary, .container .signup_section form .btn-primary,
+  .container .signup_section form .btn-outline-primary {
+    font-size: 10px;
+  }
+}
+
+/* line 64, ../sass/stylesheet.scss */
+.container .login_section form .btn-primary, .container .signup_section form .btn-primary {
+  background-color: orangered;
+  border: 1px solid orangered;
+  padding: 7px 40px;
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 64, ../sass/stylesheet.scss */
+  .container .login_section form .btn-primary, .container .signup_section form .btn-primary {
+    padding: 6px 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+  /* line 64, ../sass/stylesheet.scss */
+  .container .login_section form .btn-primary, .container .signup_section form .btn-primary {
+    padding: 5px 15px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 64, ../sass/stylesheet.scss */
+  .container .login_section form .btn-primary, .container .signup_section form .btn-primary {
+    padding: 10px 40px;
+  }
+}
+
+/* line 78, ../sass/stylesheet.scss */
+.container .login_section form .btn-outline-primary, .container .signup_section form .btn-outline-primary {
+  border: 2px solid orangered;
+  color: orangered;
+  margin-left: 4px;
+  padding: 7px 43px;
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 78, ../sass/stylesheet.scss */
+  .container .login_section form .btn-outline-primary, .container .signup_section form .btn-outline-primary {
+    padding: 5px 15px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+  /* line 78, ../sass/stylesheet.scss */
+  .container .login_section form .btn-outline-primary, .container .signup_section form .btn-outline-primary {
+    padding: 6px 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 78, ../sass/stylesheet.scss */
+  .container .login_section form .btn-outline-primary, .container .signup_section form .btn-outline-primary {
+    padding: 10px 40px;
+  }
+}
+/* line 92, ../sass/stylesheet.scss */
+.container .login_section form .btn-outline-primary:hover, .container .signup_section form .btn-outline-primary:hover {
+  background-color: orangered;
+  color: #ffffff;
+}
+
+/* line 98, ../sass/stylesheet.scss */
+.container .login_section form .form-row .form-control, .container .signup_section form .form-row .form-control {
+  width: 280px;
+  font-size: 0.85rem;
+  padding: 8px 20px;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 575px) {
+  /* line 98, ../sass/stylesheet.scss */
+  .container .login_section form .form-row .form-control, .container .signup_section form .form-row .form-control {
+    width: 385px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    padding: 12px 30px;
+  }
+}
+
+/* line 110, ../sass/stylesheet.scss */
+.container .login_section form .form-check, .container .signup_section form .form-check {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 575px) {
+  /* line 110, ../sass/stylesheet.scss */
+  .container .login_section form .form-check, .container .signup_section form .form-check {
+    margin-top: 10px;
+  }
+}
+/* line 116, ../sass/stylesheet.scss */
+.container .login_section form .form-check .form-check-label, .container .signup_section form .form-check .form-check-label, .container .login_section form .form-check a, .container .signup_section form .form-check a {
+  font-size: 11px;
+}
+@media only screen and (max-width: 575px) {
+  /* line 116, ../sass/stylesheet.scss */
+  .container .login_section form .form-check .form-check-label, .container .signup_section form .form-check .form-check-label, .container .login_section form .form-check a, .container .signup_section form .form-check a {
+    font-size: 0.8rem;
+  }
+}
+/* line 122, ../sass/stylesheet.scss */
+.container .login_section form .form-check .form-check-label, .container .signup_section form .form-check .form-check-label {
+  color: #98a6a9;
+}
+
+/* line 129, ../sass/stylesheet.scss */
+.error {
+  display: none;
+}
+
+/* line 135, ../sass/stylesheet.scss */
+.was-validated-user #user-error img {
+  width: 14px;
+}
+
+/* line 143, ../sass/stylesheet.scss */
+.was-validated-password #pass-error img {
+  width: 14px;
+}
+
+/* line 149, ../sass/stylesheet.scss */
+body {
+  background-color: #3086D9;
+  font-family: Arial;
+}
+
+/* line 153, ../sass/stylesheet.scss */
+.container {
+  max-height: 620px;
+  background-color: #ffffff;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 30px 100px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 60px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 153, ../sass/stylesheet.scss */
+  .container {
+    max-height: 580px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 153, ../sass/stylesheet.scss */
+  .container {
+    max-height: 595px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+  /* line 153, ../sass/stylesheet.scss */
+  .container {
+    max-height: 480px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 153, ../sass/stylesheet.scss */
+  .container {
+    max-height: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 153, ../sass/stylesheet.scss */
+  .container {
+    margin-bottom: 50px;
+  }
+}
+/* line 174, ../sass/stylesheet.scss */
+.container .bg_section_login,
+.container .bg_section_signup {
+  max-height: 620px;
+  background-size: cover !important;
+  position: relative;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 174, ../sass/stylesheet.scss */
+  .container .bg_section_login,
+  .container .bg_section_signup {
+    max-height: 520px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 174, ../sass/stylesheet.scss */
+  .container .bg_section_login,
+  .container .bg_section_signup {
+    max-height: 545px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+  /* line 174, ../sass/stylesheet.scss */
+  .container .bg_section_login,
+  .container .bg_section_signup {
+    max-height: 440px;
+    display: block;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 174, ../sass/stylesheet.scss */
+  .container .bg_section_login,
+  .container .bg_section_signup {
+    display: none;
+  }
+}
+/* line 192, ../sass/stylesheet.scss */
+.container .bg_section_login img,
+.container .bg_section_signup img {
+  width: 220px;
+  position: absolute;
+  top: 8%;
+  left: -10px;
+}
+/* line 199, ../sass/stylesheet.scss */
+.container .m_bg_section_login {
+  display: none;
+}
+@media only screen and (max-width: 575px) {
+  /* line 199, ../sass/stylesheet.scss */
+  /* telefon için arka plan resim yeri */
+  .container .m_bg_section_login {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXOQt4dLwVlJR-QHzumG0t2Q6bEr7l0rnz-Q&usqp=CAU") no-repeat;
+    display: block;
+    background-size: contain;
+    padding-left: 0px;
+    padding-bottom: 57%;
+  }
+  /* line 207, ../sass/stylesheet.scss */
+  .container .m_bg_section_login img {
+    width: 34%;
+    padding-top: 6%;
+  }
+}
+/* line 213, ../sass/stylesheet.scss */
+.container .m_bg_section_signup {
+  display: none;
+}
+@media only screen and (max-width: 575px) {
+  /* line 213, ../sass/stylesheet.scss */
+  .container .m_bg_section_signup {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXOQt4dLwVlJR-QHzumG0t2Q6bEr7l0rnz-Q&usqp=CAU) no-repeat;
+    display: block;
+    background-size: contain;
+    padding-left: 0px;
+    padding-bottom: 57%;
+  }
+  /* line 221, ../sass/stylesheet.scss */
+  .container .m_bg_section_signup img {
+    width: 34%;
+    padding-top: 6%;
+  }
+}
+/* line 227, ../sass/stylesheet.scss */
+.container .bg_section_login {
+  background: url("img/upIn.jpg") no-repeat;
+}
+/* line 230, ../sass/stylesheet.scss */
+.container .bg_section_signup {
+  background: url("img/upIn.jpg") no-repeat;
+}
+/* line 234, ../sass/stylesheet.scss */
+.container .login_section {
+  padding-top: 200px;
+  padding-bottom: 185px;
+  padding-left: 108px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 234, ../sass/stylesheet.scss */
+  .container .login_section {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 234, ../sass/stylesheet.scss */
+  .container .login_section {
+    padding-top: 130px;
+    padding-left: 40px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+  /* line 234, ../sass/stylesheet.scss */
+  .container .login_section {
+    padding-top: 100px;
+    padding-left: 16px;
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 234, ../sass/stylesheet.scss */
+  .container .login_section {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5%;
+  }
+}
+/* line 258, ../sass/stylesheet.scss */
+.container .login_section form {
+  padding-bottom: 100px;
+}
+@media only screen and (max-width: 575px) {
+  /* line 258, ../sass/stylesheet.scss */
+  .container .login_section form {
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 266, ../sass/stylesheet.scss */
+  .container .login_section form .btn-primary,
+  .container .login_section form .btn-outline-primary {
+    font-size: 16px;
+    margin-top: 30%;
+  }
+}
+/* line 280, ../sass/stylesheet.scss */
+.container .login_section form .form-row {
+  margin-bottom: 0;
+}
+/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input:-moz-placeholder {
+  color: #98a6a9;
+}
+/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input::-moz-placeholder {
+  color: #98a6a9;
+}
+/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input:-ms-input-placeholder {
+  color: #98a6a9;
+}
+/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .login_section form .form-row input::-webkit-input-placeholder {
+  color: #98a6a9;
+}
+/* line 293, ../sass/stylesheet.scss */
+.container .login_section form .form-check a {
+  margin-left: 5%;
+  color: orangered;
+  font-weight: bold;
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 293, ../sass/stylesheet.scss */
+  .container .login_section form .form-check a {
+    margin-left: 1%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+  /* line 293, ../sass/stylesheet.scss */
+  .container .login_section form .form-check a {
+    margin-left: 10%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 293, ../sass/stylesheet.scss */
+  .container .login_section form .form-check a {
+    margin-left: 25%;
+  }
+}
+/* line 306, ../sass/stylesheet.scss */
+.container .login_section form .form-check a:hover {
+  text-decoration: none;
+}
+/* line 314, ../sass/stylesheet.scss */
+.container .signup_section {
+  padding-bottom: 113px;
+  padding-left: 108px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 314, ../sass/stylesheet.scss */
+  .container .signup_section {
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 991px) {
+  /* line 314, ../sass/stylesheet.scss */
+  .container .signup_section {
+    padding-left: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 719px) {
+  /* line 314, ../sass/stylesheet.scss */
+  .container .signup_section {
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 314, ../sass/stylesheet.scss */
+  .container .signup_section {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5%;
+  }
+}
+/* line 336, ../sass/stylesheet.scss */
+.container .signup_section form {
+  max-width: 278px;
+}
+@media only screen and (max-width: 575px) {
+  /* line 336, ../sass/stylesheet.scss */
+  .container .signup_section form {
+    padding-bottom: 30px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 345, ../sass/stylesheet.scss */
+  .container .signup_section form .btn-primary,
+  .container .signup_section form .btn-outline-primary {
+    font-size: 16px;
+    margin-top: 5%;
+  }
+}
+/* line 359, ../sass/stylesheet.scss */
+.container .signup_section form .form-row {
+  margin-bottom: 0;
+}
+/* line 61, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input:-moz-placeholder {
+  color: #98a6a9;
+}
+/* line 64, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input::-moz-placeholder {
+  color: #98a6a9;
+}
+/* line 67, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input:-ms-input-placeholder {
+  color: #98a6a9;
+}
+/* line 56, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.container .signup_section form .form-row input::-webkit-input-placeholder {
+  color: #98a6a9;
+}
+/* line 373, ../sass/stylesheet.scss */
+.container .signup_section form .small_text {
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #98a6a9;
+  font-size: 11px;
+  line-height: 1.5em;
+}
+/* line 379, ../sass/stylesheet.scss */
+.container .signup_section form .small_text a {
+  color: orangered;
+  font-weight: bold;
+}
+
+/* line 388, ../sass/stylesheet.scss */
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+  background-color: #fefacb;
+}
+
+/* line 391, ../sass/stylesheet.scss */
+.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
+  border-color: #a2a2a2;
+}
+
+
+.profile-pic {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-bottom: 4.5em;
+}
+.choose-image{
+    margin-top: 1%;
+    margin-left: 4.55%;
+    font-weight: 600;
+
+}
+form{
+  margin-bottom: 70px;
+}

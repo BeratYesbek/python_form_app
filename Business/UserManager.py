@@ -1,4 +1,4 @@
-from DataAccess.UserDal import UserDal
+from djangoProject2.DataAccess.UserDal import UserDal
 
 
 class UserManager:
@@ -10,8 +10,14 @@ class UserManager:
             user.Id = result
             self.userDal.add(user)
             return True
-        else:
-            return False
+
+        return False
+
+    def login(self, email, password):
+        result = self.userDal.login(email, password)
+        return result
+    def createUser(self,user):
+        return self.userDal.createUser(user)
 
     def update(self, user):
         self.userDal.update(user)
@@ -20,7 +26,10 @@ class UserManager:
         self.userDal.delete(user)
 
     def getById(self, id):
-        self.userDal.getById(id)
+        return self.userDal.getById(id)
 
     def getAll(self):
-        self.userDal.getAll()
+        return self.userDal.getAll()
+
+    def uploadImage(self, userId, file):
+        return self.userDal.uploadImage(userId, file)
