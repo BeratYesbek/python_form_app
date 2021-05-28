@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/profileStyle.css' %}">
+    <div class="container">
+        <div id="image-box">
+            <img
+                    src="{{ user.userImage }}">
+
+        </div>
+        <form method="post" enctype="multipart/form-data" action="{% url 'profile' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <input name="file" type="file"  class="form-control-file" id="file">
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input name="firstName" type="text" value="{{ user.firstName }}" class="form-control" id="firstName" aria-describedby="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input name="lastName" type="text"   value="{{ user.lastName }}" class="form-control" id="lastName">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+
+{% endblock %}

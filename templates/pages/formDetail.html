@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/formDetailStyle.css' %}">
+
+    <div class="container">
+        <div class="content-question-box">
+            <div id="question-box">
+                <h6 id='info'>Form Question</h6>
+                <div id="question-box" class="row">
+
+                    <div class="col-md-2" id="user-info">
+                        <div id="user-image">
+                            <img
+                                    src="{{ formDto.UserImage }}"/>
+                        </div>
+                        <h6>{{ formDto.UserName }}</h6>
+                        {% if formDto.UserType == "moderator" %}
+                            <h6 style="color: #2874A6; font-weight:500;">Moderator<i class="fas fa-star"
+                                                                                     style="color: red; padding-left: 3px"></i>
+                            </h6>
+                        {% endif %}
+
+                    </div>
+                    <div class="col-md-10" id="question-info">
+
+                        <div class="dropdown">
+                            <i style="color: #F1C40F" class="fas fa-ellipsis-h" type="button" id="dropdownMenuButton"
+                               data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                {% if user.Id == formDto.SenderId  or user.userType == "moderator" %}
+                                    <form method="post" action="{% url 'formDetail' formDto.FormId %}">
+                                        {% csrf_token %}
+
+                                        <button onclick="showDialog()" type="submit" name="formId"
+                                                value="{{ formDto.FormId }}"
+                                                class="dropdown-item">Remove
+                                        </button>
+                                    </form>
+                                {% else %}
+                                {% endif %}
+                                <a class="dropdown-item" href="#">Report</a>
+
+                            </div>
+                        </div>
+                        <h5 id="questionTitle">{{ formDto.FormTitle }} </h5>
+                        <p id="questionDeclaration">{{ formDto.FormDescription }}</p>
+                        <span style="color: #fff" id="date"><i style="color: #F1C40F"
+                                                               class="fas fa-calendar-alt"></i>{{ formDto.Date }}</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="answers-text">
+            <h4>Answers</h4>
+
+        </div>
+
+        {% if answerDto %}
+            {% for item in answerDto %}
+                <div id="box" class="row">
+                    <div class="col-md-2" id="user-info-box">
+                        <div id="user-image">
+                            <img
+                                    src="{{ item.UserImage }}"/>
+                        </div>
+                        <h6>{{ item.UserName }}</h6>
+                        {% if item.UserType == "moderator" %}
+                            <h6 style="color: #2874A6; font-weight:500;">Moderator<i class="fas fa-star"
+                                                                                     style="color: red; padding-left: 3px"></i>
+                            </h6>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-10" id="answer-box">
+                        <div class="dropdown">
+                            <i class="fas fa-ellipsis-h" type="button" i2d="dropdownMenuButton"
+                               data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                {% if user.Id == item.SenderId %}
+                                    <button onclick="edit(answerId='{{ item.AnswerId }}',answerText='{{ item.AnswerText }}')"
+                                            class="dropdown-item" type="btsize">Edit
+                                    </button>
+                                {% else %}
+                                {% endif %}
+                                {% if user.Id == formDto.SenderId  or user.userType == "moderator"  or user.Id == item.SenderId %}
+
+                                    <form method="post" action="{% url 'formDetail' formDto.FormId %}">
+                                        {% csrf_token %}
+
+                                        <button onclick="showDialog()" type="submit" name="answerId"
+                                                value="{{ item.AnswerId }}"
+                                                class="dropdown-item">Remove
+                                        </button>
+                                    </form>
+
+                                {% else %}
+                                {% endif %}
+                                <a class="dropdown-item" href="#">Report</a>
+                            </div>
+                        </div>
+
+                        <p id="answerValue"> {{ item.AnswerText }}</p>
+                        <p id="answerIdText" style="visibility: hidden">{{ item.AnswerId }}</p>
+                        <span id="date"><i class="fas fa-calendar-alt"></i>{{ item.Date }}</span>
+                    </div>
+
+                </div>
+
+            {% endfor %}
+        {% else %}
+        {% endif %}
+
+
+        <form method="post" action="{% url 'formDetail' formDto.FormId %}">
+            {% csrf_token %}
+            <div class="form-group" id="comment-form-group">
+                <label for="exampleFormControlTextarea1">Write Answer</label>
+                <textarea name="answerText" class="form-control" placeholder="Answer..."
+                          id="exampleFormControlTextarea1"
+                          rows="3"></textarea>
+                <button class="btn btn-warning" type="submit">Submit <i class="fas fa-comment"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <div id="id01" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>Warning</h2>
+            </header>
+            <div class="w3-container">
+                <div style="margin: auto;" class="spinner-border text-success"></div>
+                <h6 style="text-align: center">please wait, it is deleting...</h6>
+            </div>
+            <footer class="w3-container w3-teal">
+            </footer>
+        </div>
+    </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 style="text-align: center">Edit</h2>
+            </div>
+
+            <div class="modal-body container">
+                <form enctype="multipart/form-data" action="{% url 'formDetail' formDto.FormId %}" method="post">
+                    {% csrf_token %}
+                    <div style="visibility: hidden" class="form-group">
+                        <label for="exampleFormControlTextarea1">Declaration</label>
+                        <input name="answerId" class="form-control" id="answerIdInput" rows="5"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Declaration</label>
+                        <textarea name="editAnswerText" class="form-control" id="description" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+
+    </div>
+
+    {% block javascript %}
+        <script type="text/javascript">
+            function edit(answerId, answerText) {
+                console.log("65666")
+                console.log(answerText, answerId)
+                var modal = document.getElementById("myModal");
+                modal.style.display = "block";
+                document.getElementById('description').textContent = answerText
+                document.getElementById('answerIdInput').value = answerId
+            }
+
+
+            function showDialog() {
+                document.getElementById('id01').style.display = 'block'
+            }
+
+
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+    {% endblock %}]
+
+{% endblock %}]

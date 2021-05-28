@@ -1,0 +1,183 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/png" href="assets/img/vhoops/siyahtik.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>The Lord Of The Rings</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/indexStyle.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/indexSecondStyle.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/indexThirdStyle.css' %}"/>
+
+<script src="https://kit.fontawesome.com/cef350f31b.js" crossorigin="anonymous"></script>
+</head>
+<body class="landing-page landing-page1">
+<nav class="navbar navbar-transparent navbar-top" role="navigation">
+    <div class="container" id="home-return">
+        <div class="navbar-header">
+            <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+            </button>
+            <a href="#">
+                <div class="logo-container">
+                    <div class="logo">
+                    </div>
+                    <div class="brand" style="margin-top: 6%;">
+                        The Lord Of The Rings Form
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="example">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a onclick="location.href='{% url 'signIn' %}'">
+                        Sign In
+                    </a>
+                </li>
+                <li>
+                    <a onclick="location.href='{% url 'signUp' %}'">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="wrapper">
+    <div class="parallax filter-gradient orange" data-color="orange">
+        <div class="parallax-background">
+            <img class="parallax-background-image" src="{% static 'img/mainImage.jpg' %}" style="height: 100%;  ">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="description">
+                        <h2>Showcase 1 - Be serious about your music.</h2>
+                        <br>
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus adipisci asperiores aspernatur consequuntur dolor eaque eius esse illo impedit, ipsam itaque laborum magnam maiores natus necessitatibus neque, numquam odit omnis provident quae quam quas quibusdam quis quisquam, repudiandae temporibus tenetur velit voluptate voluptates. Ea ex porro rem rerum voluptatum?</h5>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-demo" style="margin-top: 10%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="description-carousel" class="carousel fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item">
+                                <img src="{% static 'img/2.jpg' %}" alt="">
+                            </div>
+                            <div class="item active">
+                                <img src="{% static 'img/1.jpg' %}" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="{% static 'img/3.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators carousel-indicators-orange">
+                            <li data-target="#description-carousel" data-slide-to="0" class=""></li>
+                            <li data-target="#description-carousel" data-slide-to="1" class="active"></li>
+                            <li data-target="#description-carousel" data-slide-to="2" class=""></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <h4 class="header-text">Adventure of the ring</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium animi, consequuntur alias
+                        perspiciatis voluptas placeat hic ipsa veniam. Maiores architecto non dolores dicta?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-features">
+        <div class="container">
+            <h4 class="header-text text-center">Lorem ipsum.</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-orange">
+                        <div class="icon">
+                            <i class="pe-7s-musiclist"></i>
+                        </div>
+                        <div class="text">
+                            <h4>Be serious about your music</h4>
+                            <p>All appointments sync with your Google calendar so your availability is always up to
+                                date. See your schedule at a glance from any device.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-orange">
+                        <div class="icon">
+                            <i class="pe-7s-bell"></i>
+                        </div>
+                        <h4>Smart Notifications on hands</h4>
+                        <p>Automatic text and email reminders make sure customers always remember their upcoming
+                            appointments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-orange">
+                        <div class="icon">
+                            <i class="pe-7s-play"></i>
+                        </div>
+                        <h4>PlaIT on any devices</h4>
+                        <p>Take payments and run your business on the go, in your store and then see how it all adds up
+                            with analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-no-padding">
+        <div class="parallax filter-gradient orange" data-color="orange">   <!-- en alttaki tema rengi --->
+            <div class="parallax-background">
+                <img class="parallax-background-image flipped" src="{% static 'img/yüzük.jpg' %}"
+                     style="height: 70%; width: 18%;">
+            </div>
+            <div class="info">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Beautiful multipurpose bootstrap landing page.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a href="#home-return">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="copyright">
+                &copy; 2021 <a href="#home-return">The Lord Of The Rings</a>, Lorem ipsum dolor.
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+</body>
+<script src="{% static 'js/jquery-1.10.2.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/indexApp.js' %}" type="text/javascript"></script>
+
+</html>

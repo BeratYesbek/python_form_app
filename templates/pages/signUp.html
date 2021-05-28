@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0">
+    <!-- корректное отображение на мобильных устройствах, отмена масштабирования -->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Sign Up</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom css -->
+    <link href="{% static 'css/login.css' %} " rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 bg_section_signup">
+
+            </div>
+            <div class="col-12 m_bg_section_signup">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 signup_section">
+                <form method="post" class="needs-validation" enctype="multipart/form-data" action="{% url 'signUp' %}"
+                      novalidate>
+                    {% csrf_token %}
+                    <h1 style="margin-top: 15px">Sign Up</h1>
+                    <div class="error" id="mail-error">
+                        <img src="{% static 'img/icon_error.svg' %}" alt="error_icon"/>
+                        Wrong username
+                    </div>
+                    <div class="form-control">
+                        <label for="fileToUpload">
+                            <div class="profile-pic"
+                                 style="background-image: url('http://c12.incisozluk.com.tr/res/incisozluk//11503/6/3445216_o62f6.jpg')">
+                                <span>Choose Image</span>
+                            </div>
+                            <span>Choose Image</span>
+
+                        </label>
+                        <input style="visibility: hidden;" type="file" name="file" id="fileToUpload">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" class="form-control" id="name" name="firstName" aria-describedby="emailHelp"
+                               placeholder="First Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="email" class="form-control" name="email" id="mail" placeholder="Email" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password"
+                               required>
+                    </div>
+                    <div class="form-row">
+                        <input type="password" class="form-control" name="passwordAgain" id="re_password"
+                               placeholder="Password Again"
+                               required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="login_check">
+                        <label class="form-check-label" for="login_check">I agree</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button class="btn btn-outline-primary" onclick="location.href='{% url 'signIn' %} '">Sign In <a
+                            href="{% url 'signIn' %}"></a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
