@@ -8,8 +8,7 @@ Hi reader I made a web application using Ptyhon with Django framework, I used fi
 
 
 
-![The Lord Of The Rings - Google Chrome 27_05_2021 13_29_39](https://user-images.githubusercontent.com/77804034/119813057-80aab900-bef1-11eb-88c0-79d817249d5d.png)
-
+![Hello, world! - Google Chrome 28_05_2021 12_20_21](https://user-images.githubusercontent.com/77804034/119961829-25d79700-bfaf-11eb-9210-5dd3e5eb2ff0.png)
 
 
 ![The Lord Of The Rings - Google Chrome 27_05_2021 13_31_17](https://user-images.githubusercontent.com/77804034/119813088-899b8a80-bef1-11eb-88ff-4a5c8f9e8b3e.png)
